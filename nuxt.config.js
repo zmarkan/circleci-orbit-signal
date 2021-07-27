@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'orbit-signal',
+    title: 'circleci-orbit-signal',
     htmlAttrs: {
       lang: 'en',
     },

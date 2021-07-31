@@ -57,13 +57,25 @@
           >Activity Type</label
         >
         <div class="mt-1">
-          <input
+          <!--           <input
             id="activity-type"
             v-model="event.activity_type"
             type="text"
             required
             class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
           />
+ -->
+          <select 
+            id="activity-type" 
+            v-model="event.activity_type"
+            type="text"
+            required
+            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+          >
+            <option disabled value="">Please select one</option>
+            <option>attended:workshop</option>
+            <option>visited:booth</option>
+          </select>
         </div>
       </div>
       <div>

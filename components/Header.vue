@@ -4,7 +4,7 @@
   >
     <n-link to="/" class="">
       <img
-        src="@/assets/img/orbit-logo-white.svg"
+        src="@/assets/img/circle-logo-horizontal-white.png"
         alt="Orbit"
         class="h-8 p-1"
       />

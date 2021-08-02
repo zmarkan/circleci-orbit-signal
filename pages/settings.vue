@@ -74,6 +74,7 @@
           >
             <option disabled value="">Please select one</option>
             <option>attended:workshop</option>
+            <option>attended:meetup</option>
             <option>visited:booth</option>
           </select>
         </div>

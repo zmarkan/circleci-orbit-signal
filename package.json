@@ -17,6 +17,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.8.3",
     "httpie": "^1.1.2",
+    "netlify-cli": "^5.4.11",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {

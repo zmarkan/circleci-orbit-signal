@@ -18,6 +18,6 @@ jobs:
       - run: ./node_modules/netlify-cli/bin/run deploy --prod
 
 workflows:
-  sample:
+  deploy-site:
     jobs:
       - deploy

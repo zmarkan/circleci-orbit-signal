@@ -12,6 +12,7 @@ jobs:
       - checkout
       - node/install-packages
       - run: npm run generate
+      - run: ./node_modules/netlify-cli/bin/run login
       - run: ./node_modules/netlify-cli/bin/run link $netlify_site_id	
       #- run: ./node_modules/netlify-cli/bin/run deploy --prod
 

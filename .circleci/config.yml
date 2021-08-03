@@ -16,7 +16,7 @@ jobs:
           command: echo 'export NETLIFY_SITE_ID = $netlify_site_id' >> $BASH_ENV
       - run: npm run generate
       - run: ./node_modules/netlify-cli/bin/run login
-      - run: ./node_modules/netlify-cli/bin/run link $NETLIFY_SITE_ID	
+      - run: ./node_modules/netlify-cli/bin/run link --id $NETLIFY_SITE_ID	
       #- run: ./node_modules/netlify-cli/bin/run deploy --prod
 
 workflows:

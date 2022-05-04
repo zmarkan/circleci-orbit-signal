@@ -6,13 +6,13 @@ const axios = require('axios')
 exports.handler = async (event) => {
   try {
     console.log(JSON.parse(event.body))
-    const { activity_payload, node_payload, auth } = JSON.parse(event.bod)
+    const { payload, auth } = JSON.parse(event.bod)
     // const { payload, auth } = JSON.parse(event.body)
     const { data } = await axios({
       url: `https://app.orbit.love/api/v1/${auth.workspaceId}/activities`,
       method: 'POST',
       headers: { Authorization: `Bearer ${auth.apiToken}` },
-      data: activity_payload,
+      data: payload,
     })
     console.log(data)
     return res(data)

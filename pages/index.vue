@@ -141,7 +141,11 @@ export default {
     async submitActivity() {
       try {
         const { auth, description, member, activity } = this
-        const payload = { activity: { ...activity, member } }
+        const properties = {
+          event_name: 'DevOpsDays Birmingham UK',
+          note: 'Android dev, challenges with Bitrise',
+        }
+        const payload = { activity: { ...activity, member, properties } }
         if (description) payload.activity.description = description
         await this.$axios({
           url: `${location.href}api/activity`,

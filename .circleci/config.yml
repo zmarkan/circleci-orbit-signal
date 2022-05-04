@@ -11,9 +11,9 @@ jobs:
     steps: 
       - checkout
       - node/install-packages
-      - run:
-          name: "Setup custom env variables"
-          command: echo 'export NETLIFY_SITE_ID="$netlify_site_id"' >> $BASH_ENV
+      # - run:
+      #     name: "Setup custom env variables"
+      #     command: echo 'export NETLIFY_SITE_ID="$netlify_site_id"' >> $BASH_ENV
       - run: npm run generate
       - run: ./node_modules/netlify-cli/bin/run deploy --prod
 

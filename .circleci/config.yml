@@ -15,9 +15,12 @@ jobs:
       #     name: "Setup custom env variables"
       #     command: echo 'export NETLIFY_SITE_ID="$netlify_site_id"' >> $BASH_ENV
       - run: npm run generate
-      - run: ./node_modules/netlify-cli/bin/run deploy --prod
+      - run: ./node_modules/netlify-cli/bin/run deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN
 
 workflows:
   deploy-site:
     jobs:
-      - deploy
+      - deploy:
+          filters:
+            branches:
+              only: main
